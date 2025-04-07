@@ -20,7 +20,7 @@ function flicker(name){
 }
 
 function playSound(name){
-    var sound="sounds/"+ name +".mp3";
+    var sound= name +".mp3";
     var audio=new Audio(sound);
     audio.play();
 }
