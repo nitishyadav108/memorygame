@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(36, 36, 63);
+    text-align: center;
+}
+
+.title{
+    font-size: 5rem;
+    color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    word-spacing: 2rem;
+    letter-spacing: 0.5rem;
+}
+.container{
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.box{
+    margin: 25px;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border-radius:15% ;
+    border: 5px solid black;
+    
+}
+
+
+.yellow{
+    background-color: yellow;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: rgb(63, 202, 63);
+}
+
+.clicked{
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.game-over{
+    background-color: red;
+    opacity: 0.8;
+}
+
+.motivation{
+    color: white;
+    font-size: 2rem;
+    word-spacing: 20px;
+    font-family:cursive;
+}
