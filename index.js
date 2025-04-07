@@ -20,16 +20,14 @@ function flicker(name){
 }
 
 function playSound(name){
-    var sound= name +".mp3";
+    var sound="sounds/"+ name +".mp3";
     var audio=new Audio(sound);
     audio.play();
 }
 
-$(document).keydown(function(event){
-    if(event.key==="a" || event.key==="A"){
-        nextSequence();
-    }
-});
+// $(document).keydown(function(event){
+//    nextSequence();
+// });
 
 
 $(".box").click(function(event){
@@ -56,16 +54,16 @@ function checkAnswer(currentLevel){
         if(userClickedPattern.length===choosenColor.length){
             setTimeout(function () {
                 nextSequence();
-              },1000);
+              }, 1000);
         }
     }else{
         playSound("wrong");
         $("body").addClass("game-over");
-        $("h1").text("Game-over,Press any key to restart");
+        $("h1").text("Game-over,Press any key or press here to start");
 
         setTimeout(function(){
             $("body").removeClass("game-over");
-        },500);
+        },200);
 
         startOver();
     }
@@ -73,6 +71,17 @@ function checkAnswer(currentLevel){
 
 function startOver() {
     level = 0;
-    gamePattern = [];
+    choosenColor = [];
     started = false;
   }
+
+
+  function startGame() {
+    if (!started) {
+        nextSequence();
+        started = true;
+    }
+}
+
+$(document).keydown(startGame);
+$("h1").click(startGame); 
