@@ -1,4 +1,5 @@
 var userClickedPattern=[];
+var started=false;
 var choosenColor=[];
 var colours=["red","green","yellow","blue"];
 var level = 0;
